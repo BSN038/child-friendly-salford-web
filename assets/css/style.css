@@ -363,6 +363,35 @@ a:focus {
   font-weight: 700;
   text-decoration: underline;
 }
+/* Card subtitles
+   - Keep a clear hierarchy: H1 (page title) > H2 (subtitle) > body text
+*/
+.card-subtitle {
+  margin: var(--space-60) 0 var(--space-40);
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+/* Card media (images)
+   - Shared image style for cards and content blocks
+   - Avoid awkward cropping on wide images
+*/
+.card-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 0 var(--space-50);
+}
+
+/* Full-width media inside a card
+   - Used for wide “banner” images inside content sections
+*/
+.card-media--full {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
 /* Layout grids */
 .grid-3 {
@@ -454,4 +483,86 @@ a:focus {
   .nav-link {
     padding: 12px 12px;
   }
+}
+/* === Plan A additions (Homepage visuals, reusable across pages) === */
+
+/* Hero image inside the hero panel */
+.hero-media {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: var(--space-50);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Card images for consistent visual routing */
+.card--media {
+  overflow: hidden;
+  /* Ensures rounded corners clip the image */
+}
+
+.card-media {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: var(--space-50);
+}
+
+/* Lightweight hover (keeps council-friendly feel) */
+.card {
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: none;
+  }
+}
+
+/* Latest updates list */
+.updates-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.updates-item {
+  margin-bottom: var(--space-40);
+}
+
+.updates-meta {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.updates-link {
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* Full-height image for narrative pages (e.g. About page) */
+.card-media--full {
+  height: auto;
+  object-fit: contain;
+}
+/* Ensure subtitles are visually smaller than main titles */
+.card-subtitle {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  margin-top: var(--space-60);
+  margin-bottom: var(--space-30);
 }

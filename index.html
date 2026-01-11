@@ -4,25 +4,34 @@
   <!--
     Child Friendly Salford
     Homepage (static MVP)
+
+    Plan A updates:
+    - Add a real hero image (panel) for warmth and visual appeal
+    - Add consistent card images for key audience routes
+    - Add "Latest updates" teaser section to make the homepage feel alive
+    - Keep council-friendly styles (no palette changes) and reuse global CSS
   -->
-  <meta charset="UTF-8" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Child Friendly Salford</title>
 
   <!-- Main stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" >
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <!-- Skip link for accessibility -->
+  <!--
+    Accessibility:
+    - Skip link for keyboard and screen reader users
+  -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Top header -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
+      <!-- Brand / logo -->
       <a class="brand" href="index.html" aria-label="Child Friendly Salford home">
-        <!-- Replace with official logo when available -->
         <div class="brand-mark" aria-hidden="true">CFS</div>
         <div class="brand-text">
           <span class="brand-name">Child Friendly Salford</span>
@@ -30,11 +39,13 @@
         </div>
       </a>
 
+      <!-- Mobile nav toggle -->
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">Open menu</span>
         <span class="burger" aria-hidden="true"></span>
       </button>
 
+      <!-- Primary navigation -->
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a class="nav-link is-active" href="index.html">Home</a>
         <a class="nav-link" href="about.html">About</a>
@@ -51,8 +62,9 @@
     <div class="container hero-inner">
       <div class="hero-copy">
         <h1 class="hero-title">
-          Putting children’s rights into practice in Salford
+          Putting children’s rights into practice across Salford.
         </h1>
+
         <p class="hero-lead">
           Child Friendly Salford is part of UNICEF UK’s Child Friendly Cities and Communities programme,
           working to ensure children and young people are at the heart of local decision-making.
@@ -64,7 +76,20 @@
         </div>
       </div>
 
+      <!--
+        Plan A:
+        - Add a real image to the hero panel.
+        - Keep the panel as the "right column" so the layout remains consistent.
+      -->
       <div class="hero-panel" aria-label="Quick links">
+        <img
+          class="hero-media"
+          src="assets/images/hero-salford.jpg"
+          alt="Children and families taking part in a community activity in Salford"
+          loading="eager"
+          decoding="async"
+        >
+
         <h2 class="panel-title">Quick links</h2>
         <ul class="panel-list">
           <li><a href="families.html">For families & young people</a></li>
@@ -78,34 +103,94 @@
 
   <!-- Main -->
   <main id="main">
+    <!-- Key routes -->
     <div class="container section">
       <div class="grid-3">
-        <article class="card">
+        <article class="card card--media">
+          <!-- Card image -->
+          <img
+            class="card-media"
+            src="assets/images/card-families.jpg"
+            alt="A family spending time together"
+            loading="lazy"
+            decoding="async"
+          >
+
           <h2 class="card-title">For families</h2>
           <p class="card-text">
-            Find information, resources and ways to get involved. Clear, accessible content designed for everyone.
+            You can find clear information, practical support and opportunities for children, young people and families to take part in Child Friendly Salford and have your voices heard.
           </p>
           <a class="card-link" href="families.html">Explore family information</a>
         </article>
 
-        <article class="card">
+        <article class="card card--media">
+          <!-- Card image -->
+          <img
+            class="card-media"
+            src="assets/images/card-organisations.jpg"
+            alt="People collaborating at a community meeting"
+            loading="lazy"
+            decoding="async"
+          >
+
           <h2 class="card-title">For organisations</h2>
           <p class="card-text">
-            Learn how your organisation can support the programme, share opportunities and work in partnership.
+            You can work in partnership with Child Friendly Salford to support children’s rights, share opportunities and help create positive change across the city.
           </p>
           <a class="card-link" href="organisations.html">Work with us</a>
         </article>
 
-        <article class="card">
+        <article class="card card--media">
+          <!-- Card image -->
+          <img
+            class="card-media"
+            src="assets/images/card-news.jpg"
+            alt="A noticeboard showing community updates"
+            loading="lazy"
+            decoding="async"
+          >
+
           <h2 class="card-title">News & updates</h2>
           <p class="card-text">
-            Read programme updates, stories and progress as we build a more child friendly Salford.
+            You can stay up to date with the latest programme news, community stories and key milestones as Child Friendly Salford continues to develop.
           </p>
           <a class="card-link" href="news.html">View latest news</a>
         </article>
       </div>
     </div>
 
+    <!--
+      Plan A:
+      - Add a lightweight "Latest updates" teaser so the homepage feels current.
+      - No CMS yet: keep content simple and link to the News page.
+    -->
+    <div class="container section">
+      <section class="card card-soft">
+        <h2 class="card-title">Latest updates</h2>
+        <p class="card-text">
+          We’ll share programme milestones and stories here. For full updates, visit the News page.
+        </p>
+
+        <ul class="updates-list">
+          <li class="updates-item">
+            <span class="updates-meta">Update</span>
+            <a class="updates-link" href="news.html">Programme update: building a shared approach to children’s rights</a>
+          </li>
+
+          <li class="updates-item">
+            <span class="updates-meta">Involvement</span>
+            <a class="updates-link" href="news.html">Community involvement: families and partners shaping what “child friendly” means</a>
+          </li>
+
+          <li class="updates-item">
+            <span class="updates-meta">Next steps</span>
+            <a class="updates-link" href="news.html">Next steps: what happens over the coming months</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Accessibility + forms -->
     <div class="container section">
       <div class="split">
         <section class="card card-soft">
@@ -142,6 +227,7 @@
     </div>
   </footer>
 
+  <!-- Main JS (mobile nav toggle) -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
