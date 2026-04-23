@@ -248,16 +248,13 @@ a:focus {
 
 /* Hero */
 .hero {
-  background: var(--brand-magenta);
-  color: #fff;
-  padding: var(--space-80) 0;
+  color: #3A3636;
+  /* color oficial del PDF */
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
-  gap: var(--space-70);
-  align-items: start;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-title {
@@ -296,34 +293,28 @@ a:focus {
 }
 
 .btn-outline {
-  background: transparent;
+  background: var(--brand-blue-dark);
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.9);
-}
-
-.btn-light:hover,
-.btn-light:focus {
-  background: #f3f3f3;
-  color: #111;
+  border-color: var(--brand-blue-dark);
 }
 
 .btn-outline:hover,
 .btn-outline:focus {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--brand-red);
   color: #fff;
+  border-color: var(--brand-red);
 }
 
 /* Hero side panel */
 .hero-panel {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(rgba(0, 0, 0, 0.5));
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius);
   padding: var(--space-60);
 }
 
 .panel-title {
-  margin: 0 0 var(--space-40);
-  font-size: 1.2rem;
+  color: #fff;
 }
 
 .panel-list {
@@ -333,11 +324,10 @@ a:focus {
 
 .panel-list a {
   color: #fff;
+  font-weight: 600;
 }
 
-.panel-list a:hover,
-.panel-list a:focus {
-  color: #fff;
+.panel-list a:hover {
   text-decoration: underline;
 }
 
@@ -591,4 +581,16 @@ a:focus {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-panel,
+.hero-panel .panel-title,
+.hero-panel .panel-list,
+.hero-panel .panel-list a {
+  color: var(--brand-dark) !important;
+}
+
+.hero-panel .panel-list a {
+  font-weight: 700;
+  text-decoration: underline;
 }
