@@ -6,7 +6,16 @@
 
 :root {
   /* Brand */
-  --brand-magenta: #B21180;
+  --brand-magenta: --brand-blue-dark: #444691;
+    --brand-blue-light: #5EABDB;
+    --brand-red: #EC6547;
+    --brand-yellow: #FCE860;
+    --brand-white: #FFFFFF;
+    --brand-dark: #3A3636;
+  
+    --brand-primary: #444691;
+    --brand-secondary: #5EABDB;
+    --brand-accent: #FCE860;
 
   /* Neutrals */
   --text: #1f1f1f;
@@ -43,12 +52,12 @@ html {
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--bg);
+  background-color: #5EABDB;
+  /* fallback */
+  background-image: url("../images/page-texture1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Accessibility helpers */
@@ -334,7 +343,10 @@ a:focus {
 
 /* Sections */
 .section {
-  padding: var(--space-70) 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 2rem;
 }
 
 /* Cards */
@@ -565,4 +577,18 @@ a:focus {
   font-weight: 700;
   margin-top: var(--space-60);
   margin-bottom: var(--space-30);
+}
+.hero-title {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }

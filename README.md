@@ -1,7 +1,7 @@
 # Child Friendly Salford Web
 
 This repository contains the front-end codebase for the **Child Friendly Salford** website.  
-The site supports the local delivery of **UNICEF UK’s Child Friendly Cities and Communities programme**, providing clear, accessible information for families, young people, organisations and partners across Salford.
+The site supports the local delivery of **Salford City Council initiative**, providing clear, accessible information for families, young people, organisations and partners across Salford.
 
 ---
 
@@ -13,7 +13,7 @@ Child Friendly Salford aims to:
 - Encourage collaboration between families, organisations, schools, community groups and the private sector
 - Provide a central, trusted source of information about the programme
 
-This website is designed as a **public-facing, institutional platform**, aligned with local council and UNICEF UK standards.
+This website is designed as a **public-facing, institutional platform**, aligned with Salford council  standards.
 
 ---
 
